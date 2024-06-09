@@ -87,9 +87,8 @@ GMAIL_API_SEND_URL=https://www.googleapis.com/gmail/v1/users/me/messages/send
 
 ### Test Email IDs in Google Cloud Console
 
-You can use the following test email IDs for testing the application:
-in the oAuth Consent screen and goto the Test users section and add
-the test users 
+You can use the  test email IDs for testing the application in the oAuth Consent screen then
+scroll down to the Test users section and add the test users 
 
 ### Usage
 
