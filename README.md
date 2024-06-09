@@ -13,8 +13,6 @@ FLASK MAILER TEST
 │   ├── preview.html
 │   └── sent.html
 │
-├── venv
-│   └── ...
 ├── .env
 ├── .gitignore
 ├── app.py
