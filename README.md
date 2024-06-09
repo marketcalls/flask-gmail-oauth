@@ -1,5 +1,5 @@
 
-# Flask Mailer Test
+# Flask Gmail OAuth 
 
 This is a simple Flask application that uses OAuth 2.0 for Google login and Gmail API to send emails. The application includes three main pages: the email form, the email preview, and a confirmation page upon successful email sending.
 
