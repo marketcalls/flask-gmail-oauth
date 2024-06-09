@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ mode: 'plain' }">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email</title>
+    <script src="https://cdn.tailwindcss.com/3.4.4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/alpinejs@3.14.0/dist/cdn.min.js" defer></script>
+    <style>
+        body {
+            background-color: #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col justify-center">
+    <div class="container mx-auto p-4">
+        <div class="bg-gray-800 rounded shadow-md p-6 w-full">
+            <h1 class="text-2xl font-bold mb-4 text-white">Send Email</h1>
+            <form action="/preview" method="post">
+                <div class="mb-4">
+                    <label for="recipient" class="block text-sm font-medium text-gray-300">Recipient Email</label>
+                    <input type="email" id="recipient" name="recipient" class="input input-bordered w-full bg-gray-700 text-gray-100" required>
+                </div>
+                <div class="mb-4">
+                    <label for="subject" class="block text-sm font-medium text-gray-300">Subject</label>
+                    <input type="text" id="subject" name="subject" class="input input-bordered w-full bg-gray-700 text-gray-100" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-300">Email Mode</label>
+                    <select id="mode" name="mode" class="select select-bordered w-full bg-gray-700 text-gray-100" x-model="mode">
+                        <option value="plain">Plain Text</option>
+                        <option value="html">HTML</option>
+                    </select>
+                </div>
+                <div class="mb-4" x-show="mode === 'plain'">
+                    <label for="body-text" class="block text-sm font-medium text-gray-300">Plain Text Body</label>
+                    <textarea id="body-text" name="body_text" class="textarea textarea-bordered w-full h-48 bg-gray-700 text-gray-100" x-bind:required="mode === 'plain'"></textarea>
+                </div>
+                <div class="mb-4" x-show="mode === 'html'">
+                    <label for="body-html" class="block text-sm font-medium text-gray-300">HTML Body</label>
+                    <textarea id="body-html" name="body_html" class="textarea textarea-bordered w-full h-48 bg-gray-700 text-gray-100" x-bind:required="mode === 'html'"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-secondary">Preview</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

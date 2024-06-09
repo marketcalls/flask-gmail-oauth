@@ -1,0 +1,43 @@
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Virtual environment
+venv/
+ENV/
+env/
+venv.bak/
+venv.bak.tar.gz
+
+# Environment variables
+.env
+
+# Flask specific
+instance/
+.webassets-cache
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.log
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific
+Thumbs.db
+Desktop.ini
+
+# Directories potentially created by Flask
+__pycache__/
