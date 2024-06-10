@@ -80,8 +80,8 @@ GMAIL_API_SEND_URL=https://www.googleapis.com/gmail/v1/users/me/messages/send
    - Go to the [Credentials page](https://console.cloud.google.com/apis/credentials)
    - Click on "Create Credentials" and select "OAuth 2.0 Client IDs"
    - Set the "Application type" to "Web application"
-   - Add `http://localhost:5000` to "Authorized JavaScript origins"
-   - Add `http://localhost:5000/login/authorized` to "Authorized redirect URIs"
+   - Add `http://127.0.0.1:5000` to "Authorized JavaScript origins"
+   - Add `http://127.0.0.1:5000/login/authorized` to "Authorized redirect URIs"
    - Click "Create"
    - Copy the "Client ID" and "Client Secret" to your `.env` file
 
